@@ -10,10 +10,10 @@
     font-family: "Georgia", serif;
     background: black;
     color: white;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     text-align: center;
   }
 
@@ -22,7 +22,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 900px;
-    padding: 20px;
+    padding: 25px;
   }
 
   .pantalla.activa {
@@ -33,12 +33,12 @@
     max-width: 100%;
     border-radius: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 0 25px rgba(255,255,255,0.25);
+    box-shadow: 0 0 30px rgba(255,255,255,0.25);
   }
 
   .texto {
     font-size: 1.2em;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 30px;
   }
 
@@ -50,29 +50,22 @@
     font-size: 1.1em;
     border-radius: 30px;
     cursor: pointer;
+    box-shadow: 0 0 18px rgba(123,44,255,0.7);
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 15px rgba(123,44,255,0.6);
   }
 
   button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(123,44,255,0.9);
+    box-shadow: 0 0 28px rgba(123,44,255,1);
   }
 
-  /* FINAL MÁGICO */
   .final {
-    animation: aparecer 2s ease forwards;
+    animation: magia 2.5s ease forwards;
   }
 
-  @keyframes aparecer {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  @keyframes magia {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
   }
 
   .nombre {
@@ -86,48 +79,55 @@
 
 <body>
 
-<!-- PANTALLA 1 -->
+<!-- INICIO -->
 <div class="pantalla activa" id="p1">
   <button onclick="siguiente(2)">
     Felices dos meses ma princesse 💜
   </button>
 </div>
 
-<!-- PANTALLA 2 -->
+<!-- PARTE 1 DE LA CARTA -->
 <div class="pantalla" id="p2">
   <img src="IMG-20250919-WA0008.jpeg">
   <div class="texto">
     Amor mío, Valeria Isabel Petro Villazón…  
-    estos dos meses contigo han sido suficientes para cambiar mi forma de sentir,
-    de soñar y de entender el amor. Contigo aprendí que el amor puede ser hogar.
+    hoy quiero detener el mundo un momento para mirarte con calma y decirte
+    lo que estos dos meses han sembrado en mí.  
+    Parece poco tiempo cuando se cuenta con el reloj,
+    pero cuando se mide con el corazón, se siente inmenso.
   </div>
   <button onclick="siguiente(3)">Siguiente</button>
 </div>
 
-<!-- PANTALLA 3 -->
+<!-- PARTE 2 DE LA CARTA -->
 <div class="pantalla" id="p3">
   <img src="IMG-20251014-WA0017.jpeg">
   <div class="texto">
-    Me encanta cómo llegaste a mi vida sin prometer nada y terminaste dándome tanto.
-    Me enamora tu esencia, tu forma de ser, y cómo sin darte cuenta
-    te volviste parte de mí.
+    Desde el primer día algo en mí supo que no era casualidad.
+    Tu forma de estar, de mirarme y de llegar a mi vida
+    se quedó sin hacer ruido y se volvió hogar.  
+    En solo dos meses lograste que pensarte sea un hábito bonito
+    y que imaginar el futuro contigo ya no dé miedo, sino emoción.
   </div>
   <button onclick="siguiente(4)">Siguiente</button>
 </div>
 
-<!-- PANTALLA 4 -->
+<!-- PARTE 3 DE LA CARTA -->
 <div class="pantalla" id="p4">
   <img src="20251202_201939-COLLAGE.jpg">
   <div class="texto">
-    Hoy celebro nuestros primeros dos meses como el inicio de algo que quiero cuidar,
-    construir y vivir contigo cada día.
+    Hoy celebro estos dos meses no como una meta,
+    sino como el inicio de algo que quiero cuidar,
+    construir y vivir contigo.  
+    Gracias por llegar a mi vida.
+    Te amo con todo mi corazón, con todo lo que soy y con todo lo que siento.
   </div>
   <button onclick="siguiente(5)">
     Te amo muchísimo mi princesa hermosa 💜
   </button>
 </div>
 
-<!-- PANTALLA FINAL -->
+<!-- FINAL MÁGICO -->
 <div class="pantalla final" id="p5">
   <div class="texto">
     ✨ Gracias por darme la oportunidad de llegar a tu vida  
@@ -151,4 +151,4 @@
 </script>
 
 </body>
-</html>
+    </html>
