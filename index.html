@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Felices Dos Meses</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  .pantalla {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    padding: 20px;
+  }
+
+  .pantalla.activa {
+    display: flex;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.25);
+  }
+
+  .texto {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  button {
+    background: #7b2cff;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 15px rgba(123,44,255,0.6);
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(123,44,255,0.9);
+  }
+
+  /* FINAL MÁGICO */
+  .final {
+    animation: aparecer 2s ease forwards;
+  }
+
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .nombre {
+    color: red;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 15px;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- PANTALLA 1 -->
+<div class="pantalla activa" id="p1">
+  <button onclick="siguiente(2)">
+    Felices dos meses ma princesse 💜
+  </button>
+</div>
+
+<!-- PANTALLA 2 -->
+<div class="pantalla" id="p2">
+  <img src="foto1.jpg">
+  <div class="texto">
+    Amor mío, Valeria Isabel Petro Villazón…  
+    estos dos meses contigo han sido suficientes para cambiar mi forma de sentir,
+    de soñar y de entender el amor. Contigo aprendí que el amor puede ser hogar.
+  </div>
+  <button onclick="siguiente(3)">Siguiente</button>
+</div>
+
+<!-- PANTALLA 3 -->
+<div class="pantalla" id="p3">
+  <img src="foto2.jpg">
+  <div class="texto">
+    Me encanta cómo llegaste a mi vida sin prometer nada y terminaste dándome tanto.
+    Me enamora tu esencia, tu forma de ser, y cómo sin darte cuenta
+    te volviste parte de mí.
+  </div>
+  <button onclick="siguiente(4)">Siguiente</button>
+</div>
+
+<!-- PANTALLA 4 -->
+<div class="pantalla" id="p4">
+  <img src="foto3.jpg">
+  <div class="texto">
+    Hoy celebro nuestros primeros dos meses como el inicio de algo que quiero cuidar,
+    construir y vivir contigo cada día.
+  </div>
+  <button onclick="siguiente(5)">
+    Te amo muchísimo mi princesa hermosa 💜
+  </button>
+</div>
+
+<!-- PANTALLA FINAL -->
+<div class="pantalla final" id="p5">
+  <div class="texto">
+    ✨ Gracias por darme la oportunidad de llegar a tu vida  
+    y demostrarte cuánto te amo, preciosa,  
+    y lo seguiré haciendo sea en esta o en otra vida ✨
+  </div>
+
+  <div class="texto">
+    Te amo muchísimo,
+    <div class="nombre">
+      VALERIA ISABEL PETRO VILLAZÓN
+    </div>
+  </div>
+</div>
+
+<script>
+  function siguiente(num) {
+    document.querySelectorAll('.pantalla').forEach(p => p.classList.remove('activa'));
+    document.getElementById('p' + num).classList.add('activa');
+  }
+</script>
+
+</body>
+</html>
